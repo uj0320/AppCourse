@@ -3,6 +3,8 @@ package  com.pu.guess_number.ui.login;
 import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
@@ -18,6 +20,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.pu.guess_number.MainActivity;
 import com.pu.guess_number.R;
 import com.pu.guess_number.ui.login.LoginViewModel;
 import com.pu.guess_number.ui.login.LoginViewModelFactory;
@@ -69,8 +72,11 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 setResult(Activity.RESULT_OK);
 
+                Intent myintent  = new Intent
+                        (LoginActivity.this, MainActivity.class);
+                startActivity(myintent);
                 //Complete and destroy login activity once successful
-                finish();
+                //finish();
             }
         });
 
