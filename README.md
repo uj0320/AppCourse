@@ -1,1 +1,1 @@
-# AppCourse
+# Practicing Git
